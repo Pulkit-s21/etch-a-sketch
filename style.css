@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background: url(https://s3.amazonaws.com/media.locally.net/original/HABA_ALT_2017-08-02-13-22-45.jpg);
+    background-size: cover;
+}
+
+canvas{
+    border: 30px solid #04a88d;
+    background: white;
+    border-radius: 20px;
+    /* set the width and height to half of the original so it doesnt look pixeled */
+    width: 800px;
+    height: 500px;
+}
+
+canvas.shake{
+    animation: shake 1s linear 1;
+}
+
+.shake{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: rgb(195, 94, 253);
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.shake:hover{
+    background: #ff0000;
+}
+
+@keyframes shake{
+        10%,
+        90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%,
+        80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%,
+        50%,
+        70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%,
+        60% {
+          transform: translate3d(4px, 0, 0);
+        }
+}
